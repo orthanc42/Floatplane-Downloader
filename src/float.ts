@@ -115,7 +115,7 @@ process.on("SIGTERM", process.exit);
 			await fetchNewVideos(subscriptions, downloader);
 			setTimeout(waitLoop, 15 * 60 * 1000);
 			const now = new Date(Date.now());
-			console.log("[" + now.toTimeString() + "]" + " Checking for new videos in 15 minutes...");
+			console.log("[" + now.toLocaleTimeString() + "]" + " Checking for new videos in 15 minutes...");
 		};
 		waitLoop();
 	} else downloader.stop();
